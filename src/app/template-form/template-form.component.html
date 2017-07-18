@@ -1,0 +1,15 @@
+<form connect="template">
+  <div>
+    <label for="name">Name</label>
+    <input type="text" ngModel name="name" id="name" [appControlIsValid]="nameIsValid" #name="ngModel">
+  </div>
+  <div>{{name.errors | json}}</div>
+
+  <div>
+    <label for="email">Email</label>
+    <input type="email" ngModel name="email" id="email" [appControlIsValid]="emailIsValid" #email="ngModel">
+  </div>
+  <div>{{email.errors | json}}</div>
+
+  <button>Submit</button>
+</form>

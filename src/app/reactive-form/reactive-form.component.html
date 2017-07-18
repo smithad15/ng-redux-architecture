@@ -1,0 +1,15 @@
+<form connect="template" [formGroup]="form">
+  <div>
+    <label for="name">Name</label>
+    <input type="text" formControlName="name" id="name">
+  </div>
+  <div>{{form.get('name').errors | json}}</div>
+
+  <div>
+    <label for="email">Email</label>
+    <input type="email" formControlName="email" id="email">
+  </div>
+  <div>{{form.get('email').errors | json}}</div>
+
+  <button>Submit</button>
+</form>
